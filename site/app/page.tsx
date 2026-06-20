@@ -344,16 +344,29 @@ export default function Home() {
               {testimonials.map((t, i) => (
                 <Reveal key={t.name} delay={(i % 3) * 80}>
                   <figure className="break-inside-avoid rounded-3xl bg-white p-6 shadow-sm shadow-plum-900/5 ring-1 ring-blush-100/60">
-                    <Stars />
-                    <blockquote className="mt-4 leading-relaxed text-plum-800/80">
-                      “{t.text}”
+                    <div className="flex items-center justify-between gap-3">
+                      <Stars />
+                      <span className="shrink-0 rounded-full bg-blush-50 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-blush-600">
+                        {t.service}
+                      </span>
+                    </div>
+                    <p className="mt-4 font-serif text-xl font-semibold leading-snug text-plum-900">
+                      “{t.headline}”
+                    </p>
+                    <blockquote className="mt-3 text-sm leading-relaxed text-plum-800/70">
+                      {t.text}
                     </blockquote>
-                    <figcaption className="mt-5 flex items-center gap-3">
+                    <figcaption className="mt-5 flex items-center gap-3 border-t border-blush-100 pt-4">
                       <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blush-100 font-serif text-lg font-semibold text-blush-700">
                         {t.name.charAt(0)}
                       </span>
-                      <span className="text-sm font-semibold text-plum-900">
-                        {t.name}
+                      <span>
+                        <span className="block text-sm font-semibold text-plum-900">
+                          {t.name}
+                        </span>
+                        <span className="block text-xs text-plum-800/50">
+                          Avaliação verificada no Google
+                        </span>
                       </span>
                     </figcaption>
                   </figure>

@@ -111,42 +111,62 @@ export const benefits = [
 export const testimonials = [
   {
     name: "Ana Facion",
+    headline: "Saí desinchada e com medidas visivelmente menores",
+    service: "Limpeza de Pele + Detox",
     text: "Maravilhosa! Excelente trabalho! Fiz uma limpeza de pele que me surpreendeu!!! O Detox é sensacional, saí de lá com medidas visivelmente menores e desinchada.",
   },
   {
     name: "Cristiane Theodoro de Paula",
+    headline: "Atendimento top — amei o resultado",
+    service: "Massagem + Tratamento de Pele",
     text: "Atendimento top! Vânia tem muito conhecimento e utiliza produtos de alta qualidade. Tanto a massagem como o tratamento de pele, amei o resultado. Só tenho a agradecer pelo ótimo atendimento.",
   },
   {
     name: "Roberto Costa Moreira",
+    headline: "Minha sogra de 91 anos amou o atendimento",
+    service: "Atendimento Domiciliar",
     text: "A Dra. Vânia é muito eficiente e atenciosa. Minha sogrinha de 91 anos amou o atendimento dela. Eu super recomendo.",
   },
   {
     name: "Carol Steidl",
+    headline: "A massagem é maravilhosa e o rosto fica impecável",
+    service: "Massagem + Limpeza de Pele",
     text: "Fisioterapeuta atenciosa, explica o procedimento e como vai funcionar. Produtos de ótima qualidade. A massagem dela é maravilhosa e a limpeza de pele deixa o rosto impecável.",
   },
   {
     name: "Paulo Roberto",
+    headline: "Recuperei minha clavícula bem acompanhado",
+    service: "Fisioterapia / Reabilitação",
     text: "Os exercícios e orientações me ajudaram bastante na recuperação da minha clavícula. Me senti muito bem acompanhado durante todo o processo. Obrigado pelo profissionalismo e atenção!",
   },
   {
     name: "Cibele Santos",
+    headline: "Mãos maravilhosas e muito cuidado com o cliente",
+    service: "Estética",
     text: "Minha experiência foi ótima, a Vânia tem uma ótima energia e mãos maravilhosas. Dá muita atenção e tem muito cuidado com os clientes. Voltarei mais vezes com certeza.",
   },
   {
     name: "Renata Sales e Souza",
+    headline: "Recomendo de olhos fechados",
+    service: "Estética",
     text: "Excelente profissional, recomendo de olhos fechados. Dedicada, cuidadosa, atenciosa e prestativa, tira todas as dúvidas antes de realizar cada procedimento.",
   },
   {
     name: "Marcia Camargo",
+    headline: "Gosto muito do tratamento que ela faz",
+    service: "Tratamento contínuo",
     text: "Excelente profissional, gosto muito do tratamento que ela faz. Recomendo.",
   },
   {
     name: "Aline Peixoto",
+    headline: "Lugar acolhedor e profissional excelente",
+    service: "Atendimento no consultório",
     text: "Lugar muito acolhedor, organizado e a profissional é excelente. Recomendo muito!",
   },
   {
     name: "Ruth Medeiros",
+    headline: "Simpática, cuidadosa e delicada",
+    service: "Estética",
     text: "Local de fácil acesso. Ótima profissional, simpática, cuidadosa e delicada. Ótimos serviços.",
   },
 ];
