@@ -11,7 +11,6 @@ import {
   benefits,
   problems,
   audience,
-  testimonials,
   reviewShots,
   faq,
 } from "@/lib/site";
@@ -48,7 +47,7 @@ const jsonLd = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5.0",
-    reviewCount: testimonials.length,
+    reviewCount: 50,
   },
   makesOffer: services.map((s) => ({
     "@type": "Offer",
@@ -356,55 +355,31 @@ export default function Home() {
               </div>
             </Reveal>
 
-            <div className="mt-14 columns-1 gap-6 sm:columns-2 lg:columns-3 [&>*]:mb-6">
-              {testimonials.map((t, i) => (
-                <Reveal key={t.name} delay={(i % 3) * 80}>
-                  <figure className="break-inside-avoid rounded-3xl bg-white p-6 shadow-sm shadow-plum-900/5 ring-1 ring-blush-100/60">
-                    <Stars />
-                    <p className="mt-4 font-serif text-xl font-semibold leading-snug text-plum-900">
-                      “{t.headline}”
-                    </p>
-                    <blockquote className="mt-3 text-sm leading-relaxed text-plum-800/70">
-                      {t.text}
-                    </blockquote>
-                    <figcaption className="mt-5 flex items-center gap-3 border-t border-blush-100 pt-4">
-                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blush-100 font-serif text-lg font-semibold text-blush-700">
-                        {t.name.charAt(0)}
-                      </span>
-                      <span>
-                        <span className="block text-sm font-semibold text-plum-900">
-                          {t.name}
-                        </span>
-                        <span className="block text-xs text-plum-800/50">
-                          Avaliação verificada no Google
-                        </span>
-                      </span>
-                    </figcaption>
-                  </figure>
-                </Reveal>
-              ))}
-            </div>
-
-            <Reveal delay={120} className="mt-14">
-              <p className="text-center text-sm font-medium text-plum-800/60">
-                📸 Prints reais das avaliações no Google
-              </p>
-              <div className="mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 [scrollbar-width:thin]">
-                {reviewShots.map((src, i) => (
-                  <div
-                    key={src}
-                    className="w-64 shrink-0 snap-center overflow-hidden rounded-2xl bg-white shadow-md shadow-plum-900/10 ring-1 ring-blush-100/60"
-                  >
+            <div className="mt-14 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
+              {reviewShots.map((src, i) => (
+                <Reveal key={src} delay={(i % 3) * 80}>
+                  <div className="break-inside-avoid overflow-hidden rounded-2xl bg-white shadow-md shadow-plum-900/10 ring-1 ring-blush-100/60">
                     <Image
                       src={src}
-                      alt={`Avaliação no Google sobre a Vânia Amaral ${i + 1}`}
+                      alt={`Avaliação real no Google sobre a Vânia Amaral ${i + 1}`}
                       width={1080}
                       height={1200}
                       className="h-auto w-full"
                     />
                   </div>
-                ))}
-              </div>
+                </Reveal>
+              ))}
+            </div>
+
+            <Reveal delay={120} className="mt-12 text-center">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-full bg-blush-600 px-8 py-4 font-semibold text-white shadow-xl shadow-blush-600/30 transition-all hover:bg-blush-700"
+              >
+                Quero esse cuidado também
+              </a>
             </Reveal>
           </div>
         </section>
