@@ -321,8 +321,11 @@ export default function Home() {
                       controls
                       preload="metadata"
                       playsInline
+                      poster={v.src
+                        .replace("/videos/", "/videos/posters/")
+                        .replace(".mp4", ".jpg")}
                     >
-                      <source src={v.src} type="video/mp4" />
+                      <source src={`${v.src}#t=0.1`} type="video/mp4" />
                     </video>
                     <div className="flex items-center justify-between gap-3 px-4 py-3">
                       <p className="text-sm font-medium text-white">{v.title}</p>
