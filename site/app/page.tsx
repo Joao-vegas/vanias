@@ -152,21 +152,15 @@ export default function Home() {
               </p>
             </Reveal>
 
-            <div className="mt-14 space-y-4">
+            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {problems.map((p, i) => (
                 <Reveal key={p.pain} delay={(i % 3) * 70}>
-                  <div className="grid items-center gap-4 rounded-3xl bg-white p-6 shadow-sm shadow-plum-900/5 ring-1 ring-blush-100/60 md:grid-cols-[1fr_auto_1.3fr]">
-                    <div className="flex items-start gap-3">
-                      <span className="mt-0.5 text-xl">😟</span>
-                      <p className="font-semibold text-plum-900">{p.pain}</p>
-                    </div>
-                    <span className="hidden text-2xl text-blush-300 md:block">→</span>
-                    <div className="flex items-start gap-3 rounded-2xl bg-blush-50/70 p-4">
-                      <span className="mt-0.5 text-xl">✨</span>
-                      <p className="text-sm leading-relaxed text-plum-800/80">
-                        {p.solution}
-                      </p>
-                    </div>
+                  <div className="h-full rounded-2xl bg-white p-5 shadow-sm shadow-plum-900/5 ring-1 ring-blush-100/60">
+                    <p className="font-semibold text-plum-900">{p.pain}</p>
+                    <p className="mt-2 flex items-start gap-2 text-sm leading-relaxed text-plum-800/70">
+                      <span className="text-blush-400">✨</span>
+                      {p.solution}
+                    </p>
                   </div>
                 </Reveal>
               ))}
@@ -366,12 +360,7 @@ export default function Home() {
               {testimonials.map((t, i) => (
                 <Reveal key={t.name} delay={(i % 3) * 80}>
                   <figure className="break-inside-avoid rounded-3xl bg-white p-6 shadow-sm shadow-plum-900/5 ring-1 ring-blush-100/60">
-                    <div className="flex items-center justify-between gap-3">
-                      <Stars />
-                      <span className="shrink-0 rounded-full bg-blush-50 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-blush-600">
-                        {t.service}
-                      </span>
-                    </div>
+                    <Stars />
                     <p className="mt-4 font-serif text-xl font-semibold leading-snug text-plum-900">
                       “{t.headline}”
                     </p>

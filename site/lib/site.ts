@@ -102,29 +102,24 @@ export const videos = [
 
 export const problems = [
   {
-    pain: "Dor que não passa e limita o seu dia a dia",
-    solution:
-      "Avaliação detalhada para encontrar a causa — não só aliviar o sintoma — e um plano de tratamento feito para o seu corpo.",
+    pain: "Dor que não passa",
+    solution: "Avaliação que encontra a causa e plano feito para o seu corpo.",
   },
   {
-    pain: "Medo de se machucar no pós-operatório",
-    solution:
-      "Acompanhamento seguro de cada etapa da recuperação, com exercícios e orientações no seu ritmo, dentro de casa.",
+    pain: "Pós-operatório com medo de se machucar",
+    solution: "Recuperação segura, no seu ritmo e dentro de casa.",
   },
   {
-    pain: "Inchaço, retenção e sensação de peso",
-    solution:
-      "Drenagem linfática manual que melhora a circulação, reduz o inchaço e devolve a leveza ao corpo.",
+    pain: "Inchaço e sensação de peso",
+    solution: "Drenagem linfática que reduz o inchaço e devolve a leveza.",
   },
   {
-    pain: "Dificuldade de se deslocar até a clínica",
-    solution:
-      "Atendimento domiciliar completo: a Vânia leva equipamento e cuidado profissional até você, sem deslocamento.",
+    pain: "Dificuldade de se deslocar",
+    solution: "Atendimento domiciliar completo, sem você sair de casa.",
   },
   {
-    pain: "Pele sem viço, oleosa ou com impurezas",
-    solution:
-      "Limpeza de pele profunda e revitalização facial que renovam a pele e elevam a sua autoestima.",
+    pain: "Pele sem viço ou com impurezas",
+    solution: "Limpeza profunda e revitalização que renovam a autoestima.",
   },
 ];
 
