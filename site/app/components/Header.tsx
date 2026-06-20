@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import { whatsappUrl } from "@/lib/site";
 
 const links = [
-  { href: "#sobre", label: "Sobre" },
+  { href: "#para-quem", label: "Para quem" },
   { href: "#servicos", label: "Serviços" },
   { href: "#resultados", label: "Resultados" },
   { href: "#depoimentos", label: "Depoimentos" },
+  { href: "#sobre", label: "Sobre" },
   { href: "#faq", label: "Dúvidas" },
-  { href: "#contato", label: "Contato" },
 ];
 
 export default function Header() {

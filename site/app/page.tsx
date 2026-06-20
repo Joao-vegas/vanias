@@ -9,7 +9,10 @@ import {
   services,
   videos,
   benefits,
+  problems,
+  audience,
   testimonials,
+  reviewShots,
   faq,
 } from "@/lib/site";
 
@@ -70,15 +73,16 @@ export default function Home() {
           <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-2">
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full border border-blush-200 bg-white/70 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-blush-600 backdrop-blur">
-                {site.crefito}
+                Fisioterapeuta • {site.crefito}
               </span>
               <h1 className="mt-6 font-serif text-5xl font-semibold leading-[1.05] text-plum-900 text-balance sm:text-6xl lg:text-7xl">
-                Saúde, bem-estar e autoestima no conforto da sua casa
+                Volte a se mover sem dor — sem sair de casa
               </h1>
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-plum-800/75">
-                Fisioterapia, estética e atendimento domiciliar com cuidado
-                humanizado e personalizado. Cada tratamento é pensado para você,
-                respeitando o seu ritmo e as suas necessidades.
+                Fisioterapia e estética com atendimento domiciliar em São Paulo.
+                Um plano individualizado para você recuperar movimento, aliviar a
+                dor e cuidar da autoestima — com acolhimento, no seu ritmo e no
+                conforto da sua casa.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
@@ -132,71 +136,89 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SOBRE */}
-        <section id="sobre" className="bg-cream py-20 lg:py-28">
-          <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-[1fr_1.2fr]">
-            <Reveal className="order-2 lg:order-1">
-              <div className="relative">
-                <div className="overflow-hidden rounded-[2rem] shadow-xl shadow-plum-900/15">
-                  <Image
-                    src="/vania.jpg"
-                    alt="Vânia Amaral em atendimento"
-                    width={1080}
-                    height={1440}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="absolute -right-4 -bottom-4 rounded-2xl bg-blush-600 px-6 py-4 text-white shadow-lg">
-                  <p className="font-serif text-3xl font-semibold leading-none">+10</p>
-                  <p className="text-xs uppercase tracking-wide opacity-90">
-                    anos cuidando<br />de pessoas
-                  </p>
-                </div>
-              </div>
+        {/* PROBLEMA / SOLUÇÃO (MECANISMO) */}
+        <section id="como-ajudo" className="bg-cream py-20 lg:py-28">
+          <div className="mx-auto max-w-6xl px-5">
+            <Reveal className="mx-auto max-w-2xl text-center">
+              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-blush-500">
+                Se você se identifica
+              </span>
+              <h2 className="mt-3 font-serif text-4xl font-semibold text-plum-900 sm:text-5xl text-balance">
+                Cada incômodo tem um caminho de cuidado
+              </h2>
+              <p className="mt-4 text-lg text-plum-800/70">
+                O foco não é só aliviar o sintoma — é entender a causa e tratar
+                você por inteiro, com técnica e acolhimento.
+              </p>
             </Reveal>
 
-            <Reveal delay={120} className="order-1 lg:order-2">
-              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-blush-500">
-                Sobre mim
-              </span>
-              <h2 className="mt-3 font-serif text-4xl font-semibold text-plum-900 sm:text-5xl">
-                Olá, sou a Vânia Amaral
-              </h2>
-              <p className="mt-6 text-lg leading-relaxed text-plum-800/75">
-                Sou fisioterapeuta especializada em promover saúde, recuperação
-                funcional e bem-estar. Meu objetivo é oferecer um atendimento
-                individualizado, respeitando as necessidades de cada paciente —
-                seja no consultório ou através do atendimento domiciliar.
-              </p>
-              <p className="mt-4 text-lg leading-relaxed text-plum-800/75">
-                Acredito em um cuidado que une técnica e acolhimento. Atuo com foco em:
-              </p>
-              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                {[
-                  "Reabilitação física",
-                  "Fisioterapia domiciliar",
-                  "Drenagem linfática",
-                  "Pós-operatório",
-                  "Limpeza de pele",
-                  "Revitalização facial",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 rounded-xl bg-white px-4 py-3 text-sm font-medium text-plum-800 shadow-sm shadow-plum-900/5"
-                  >
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blush-100 text-blush-600">
-                      ✓
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            <div className="mt-14 space-y-4">
+              {problems.map((p, i) => (
+                <Reveal key={p.pain} delay={(i % 3) * 70}>
+                  <div className="grid items-center gap-4 rounded-3xl bg-white p-6 shadow-sm shadow-plum-900/5 ring-1 ring-blush-100/60 md:grid-cols-[1fr_auto_1.3fr]">
+                    <div className="flex items-start gap-3">
+                      <span className="mt-0.5 text-xl">😟</span>
+                      <p className="font-semibold text-plum-900">{p.pain}</p>
+                    </div>
+                    <span className="hidden text-2xl text-blush-300 md:block">→</span>
+                    <div className="flex items-start gap-3 rounded-2xl bg-blush-50/70 p-4">
+                      <span className="mt-0.5 text-xl">✨</span>
+                      <p className="text-sm leading-relaxed text-plum-800/80">
+                        {p.solution}
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+
+            <Reveal delay={120} className="mt-10 text-center">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-full bg-blush-600 px-8 py-4 font-semibold text-white shadow-xl shadow-blush-600/30 transition-all hover:bg-blush-700"
+              >
+                Quero resolver isso — falar com a Vânia
+              </a>
             </Reveal>
           </div>
         </section>
 
+        {/* PARA QUEM É */}
+        <section id="para-quem" className="bg-sand py-20 lg:py-28">
+          <div className="mx-auto max-w-6xl px-5">
+            <Reveal className="mx-auto max-w-2xl text-center">
+              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-blush-500">
+                Para quem é
+              </span>
+              <h2 className="mt-3 font-serif text-4xl font-semibold text-plum-900 sm:text-5xl">
+                Esse cuidado é para você se…
+              </h2>
+            </Reveal>
+
+            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {audience.map((a, i) => (
+                <Reveal key={a.title} delay={(i % 3) * 80}>
+                  <div className="flex h-full gap-4 rounded-3xl bg-white p-6 shadow-sm shadow-plum-900/5 ring-1 ring-blush-100/60">
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blush-50 text-2xl">
+                      {a.icon}
+                    </span>
+                    <div>
+                      <h3 className="font-semibold text-plum-900">{a.title}</h3>
+                      <p className="mt-1.5 text-sm leading-relaxed text-plum-800/70">
+                        {a.text}
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* SERVIÇOS */}
-        <section id="servicos" className="bg-sand py-20 lg:py-28">
+        <section id="servicos" className="bg-cream py-20 lg:py-28">
           <div className="mx-auto max-w-6xl px-5">
             <Reveal className="mx-auto max-w-2xl text-center">
               <span className="text-sm font-semibold uppercase tracking-[0.2em] text-blush-500">
@@ -283,7 +305,7 @@ export default function Home() {
         </section>
 
         {/* RESULTADOS / VÍDEOS */}
-        <section id="resultados" className="bg-cream py-20 lg:py-28">
+        <section id="resultados" className="bg-sand py-20 lg:py-28">
           <div className="mx-auto max-w-6xl px-5">
             <Reveal className="mx-auto max-w-2xl text-center">
               <span className="text-sm font-semibold uppercase tracking-[0.2em] text-blush-500">
@@ -323,7 +345,7 @@ export default function Home() {
         </section>
 
         {/* DEPOIMENTOS */}
-        <section id="depoimentos" className="bg-sand py-20 lg:py-28">
+        <section id="depoimentos" className="bg-cream py-20 lg:py-28">
           <div className="mx-auto max-w-6xl px-5">
             <Reveal className="mx-auto max-w-2xl text-center">
               <span className="text-sm font-semibold uppercase tracking-[0.2em] text-blush-500">
@@ -373,6 +395,91 @@ export default function Home() {
                 </Reveal>
               ))}
             </div>
+
+            <Reveal delay={120} className="mt-14">
+              <p className="text-center text-sm font-medium text-plum-800/60">
+                📸 Prints reais das avaliações no Google
+              </p>
+              <div className="mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 [scrollbar-width:thin]">
+                {reviewShots.map((src, i) => (
+                  <div
+                    key={src}
+                    className="w-64 shrink-0 snap-center overflow-hidden rounded-2xl bg-white shadow-md shadow-plum-900/10 ring-1 ring-blush-100/60"
+                  >
+                    <Image
+                      src={src}
+                      alt={`Avaliação no Google sobre a Vânia Amaral ${i + 1}`}
+                      width={1080}
+                      height={1200}
+                      className="h-auto w-full"
+                    />
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* SOBRE */}
+        <section id="sobre" className="bg-sand py-20 lg:py-28">
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-[1fr_1.2fr]">
+            <Reveal className="order-2 lg:order-1">
+              <div className="relative">
+                <div className="overflow-hidden rounded-[2rem] shadow-xl shadow-plum-900/15">
+                  <Image
+                    src="/vania.jpg"
+                    alt="Vânia Amaral em atendimento"
+                    width={1080}
+                    height={1440}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="absolute -right-4 -bottom-4 rounded-2xl bg-blush-600 px-6 py-4 text-white shadow-lg">
+                  <p className="font-serif text-3xl font-semibold leading-none">+10</p>
+                  <p className="text-xs uppercase tracking-wide opacity-90">
+                    anos cuidando<br />de pessoas
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={120} className="order-1 lg:order-2">
+              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-blush-500">
+                Quem cuida de você
+              </span>
+              <h2 className="mt-3 font-serif text-4xl font-semibold text-plum-900 sm:text-5xl">
+                Olá, sou a Vânia Amaral
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-plum-800/75">
+                Sou fisioterapeuta especializada em promover saúde, recuperação
+                funcional e bem-estar. Meu objetivo é oferecer um atendimento
+                individualizado, respeitando as necessidades de cada paciente —
+                seja no consultório ou através do atendimento domiciliar.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-plum-800/75">
+                Acredito em um cuidado que une técnica e acolhimento. Atuo com foco em:
+              </p>
+              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                {[
+                  "Reabilitação física",
+                  "Fisioterapia domiciliar",
+                  "Drenagem linfática",
+                  "Pós-operatório",
+                  "Limpeza de pele",
+                  "Revitalização facial",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 rounded-xl bg-white px-4 py-3 text-sm font-medium text-plum-800 shadow-sm shadow-plum-900/5"
+                  >
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blush-100 text-blush-600">
+                      ✓
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
           </div>
         </section>
 

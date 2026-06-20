@@ -100,6 +100,67 @@ export const videos = [
   },
 ];
 
+export const problems = [
+  {
+    pain: "Dor que não passa e limita o seu dia a dia",
+    solution:
+      "Avaliação detalhada para encontrar a causa — não só aliviar o sintoma — e um plano de tratamento feito para o seu corpo.",
+  },
+  {
+    pain: "Medo de se machucar no pós-operatório",
+    solution:
+      "Acompanhamento seguro de cada etapa da recuperação, com exercícios e orientações no seu ritmo, dentro de casa.",
+  },
+  {
+    pain: "Inchaço, retenção e sensação de peso",
+    solution:
+      "Drenagem linfática manual que melhora a circulação, reduz o inchaço e devolve a leveza ao corpo.",
+  },
+  {
+    pain: "Dificuldade de se deslocar até a clínica",
+    solution:
+      "Atendimento domiciliar completo: a Vânia leva equipamento e cuidado profissional até você, sem deslocamento.",
+  },
+  {
+    pain: "Pele sem viço, oleosa ou com impurezas",
+    solution:
+      "Limpeza de pele profunda e revitalização facial que renovam a pele e elevam a sua autoestima.",
+  },
+];
+
+export const audience = [
+  {
+    icon: "🩹",
+    title: "Em recuperação de cirurgia ou lesão",
+    text: "Pós-operatório, fraturas e reabilitação ortopédica com acompanhamento próximo.",
+  },
+  {
+    icon: "👵",
+    title: "Idosos e pessoas com mobilidade reduzida",
+    text: "Atendimento gentil e domiciliar, sem o desgaste do deslocamento.",
+  },
+  {
+    icon: "💢",
+    title: "Quem convive com dores crônicas",
+    text: "Lombar, ombro, artrose e tensões que limitam a rotina e o sono.",
+  },
+  {
+    icon: "🧠",
+    title: "Reabilitação neurológica e funcional",
+    text: "Recuperação de movimento, força e independência no dia a dia.",
+  },
+  {
+    icon: "🌷",
+    title: "Quem quer cuidar da pele e da autoestima",
+    text: "Limpeza de pele, revitalização facial e drenagem com resultado visível.",
+  },
+  {
+    icon: "⏳",
+    title: "Quem não tem tempo a perder",
+    text: "Agenda flexível e atendimento no conforto da sua casa ou do consultório.",
+  },
+];
+
 export const benefits = [
   "Maior conforto",
   "Sem deslocamento",
@@ -169,6 +230,14 @@ export const testimonials = [
     service: "Estética",
     text: "Local de fácil acesso. Ótima profissional, simpática, cuidadosa e delicada. Ótimos serviços.",
   },
+];
+
+export const reviewShots = [
+  "/depoimentos/google-1.jpeg",
+  "/depoimentos/google-2.jpeg",
+  "/depoimentos/google-3.jpeg",
+  "/depoimentos/google-4.jpeg",
+  "/depoimentos/google-5.jpeg",
 ];
 
 export const faq = [
