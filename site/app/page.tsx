@@ -75,13 +75,13 @@ export default function Home() {
                 Fisioterapeuta • {site.crefito}
               </span>
               <h1 className="mt-6 font-serif text-5xl font-semibold leading-[1.05] text-plum-900 text-balance sm:text-6xl lg:text-7xl">
-                Volte a se mover sem dor — sem sair de casa
+                Recupere seu movimento e viva sem dor
               </h1>
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-plum-800/75">
-                Fisioterapia e estética com atendimento domiciliar em São Paulo.
-                Um plano individualizado para você recuperar movimento, aliviar a
-                dor e cuidar da autoestima — com acolhimento, no seu ritmo e no
-                conforto da sua casa.
+                Fisioterapia com avaliação e tratamento individualizado em São
+                Paulo. Um cuidado que vai à causa da sua dor para devolver
+                movimento e qualidade de vida — também com estética e atendimento
+                domiciliar quando você precisar.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
